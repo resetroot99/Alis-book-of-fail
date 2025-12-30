@@ -1,5 +1,9 @@
 # Ali's Book of Fail — *Fail Loudly Edition*
 
+<p align="center">
+  <img src="assets/cover.png" alt="Ali's Book of Fail" width="400">
+</p>
+
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
