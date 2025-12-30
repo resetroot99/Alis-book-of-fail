@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this framework, please cite it as below."
+type: software
+title: "Ali's Book of Fail"
+abstract: "A failure-first evaluation framework for AI systems. Tests whether outputs are justified, not just correct."
+authors:
+  - family-names: "Jakvani"
+    given-names: "Ali"
+    email: "ali@jakvan.io"
+repository-code: "https://github.com/resetroot99/Alis-book-of-fail"
+license: MIT
+version: "3.1.0"
+date-released: "2024-12-30"
+keywords:
+  - ai-evaluation
+  - ai-safety
+  - testing
+  - governance
+  - failure-modes
+  - rag
+  - agents
+  - multimodal

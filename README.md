@@ -19,6 +19,38 @@ A **vendor-agnostic**, **language-agnostic** evaluation harness + doctrine for A
 
 ---
 
+## What This Is NOT
+
+- **Not a model benchmark.** We don't rank GPT vs Claude vs Llama. We test *system behavior*.
+- **Not a vibe check.** "Helpful and harmless" is not a gate. Evidence is.
+- **Not a compliance theater prop.** If your AI can't prove what it saw and did, it fails.
+- **Not optional.** If you're shipping AI without behavioral gates, you're shipping hope.
+
+This is a **system behavior gate**. It tests whether your AI system can justify its outputs—not whether the outputs sound good.
+
+---
+
+## Refusal & Escalation
+
+Your AI should know when to **shut up**.
+
+| Signal | Action | Gate |
+|--------|--------|------|
+| Unsafe request | **Refuse** — don't engage | `CONTRACT_0004_refusal_correctness` |
+| Insufficient evidence | **Abstain** — say "I don't know" | `GROUND_*` cases |
+| Conflicting sources | **Escalate** — flag for human | `CONFLICT_*` cases |
+| Sensitive topic | **Escalate** — don't decide alone | `ADV_PII_*` cases |
+| Benign request over-refused | **Fail** — over-refusal is a bug | `CONTRACT_0005_over_refusal` |
+
+The goal is **calibrated silence**: refuse when you should, abstain when you can't justify, escalate when stakes are high, and *never* over-refuse benign requests.
+
+See the `policy` field in the response contract:
+```json
+"policy": {"refuse": false, "abstain": false, "escalate": false, "reasons": []}
+```
+
+---
+
 ## Quick Links
 
 | Document | Purpose |
@@ -28,6 +60,34 @@ A **vendor-agnostic**, **language-agnostic** evaluation harness + doctrine for A
 | [Failure Taxonomy](docs/failure_taxonomy.md) | Shared vocabulary for failures |
 | [Maturity Model](docs/maturity-model.md) | 8-level adoption ladder |
 | [Contributing](CONTRIBUTING.md) | How to add cases and improve the project |
+
+---
+
+## Degraded Evidence (First-Class Failure Mode)
+
+Most evals assume clean inputs. Reality delivers garbage.
+
+The **shift suite** (`eval/cases/shift/`) tests what happens when evidence degrades:
+
+| Degradation | Test | What It Catches |
+|-------------|------|-----------------|
+| **Missing source** | `SHIFT_0001_missing_primary` | System hallucinates without admitting gap |
+| **Stale data** | `SHIFT_0002_stale_data` | System uses outdated info confidently |
+| **Conflicting sources** | `SHIFT_0003_conflicting_sources` | System picks one without flagging conflict |
+| **Partial document** | `SHIFT_0004_partial_document` | System extrapolates from fragments |
+| **Wrong language** | `SHIFT_0005_wrong_language` | System guesses instead of abstaining |
+| **Corrupted input** | `SHIFT_0006_corrupted_input` | System processes garbage as signal |
+| **Schema drift** | `SHIFT_0007_schema_drift` | System forces old schema on new data |
+| **Ambiguous reference** | `SHIFT_0008_ambiguous_reference` | System resolves ambiguity arbitrarily |
+| **Temporal gap** | `SHIFT_0009_temporal_gap` | System bridges time gaps without noting |
+| **Authority conflict** | `SHIFT_0010_authority_conflict` | System doesn't weigh source credibility |
+
+**Expected behavior:** Abstain, escalate, or surface uncertainty. Never confident hallucination.
+
+Run the suite:
+```bash
+book-of-fail --adapter http --suite shift --base-url http://localhost:8000
+```
 
 ---
 
@@ -63,6 +123,8 @@ book-of-fail --adapter http --suite contract --base-url http://localhost:8000
 ```bash
 book-of-fail --adapter replay --suite contract
 ```
+
+> **Why replay mode?** Deterministic tests that run in CI without network calls, API keys, or flaky model responses. Same tests, every time, no excuses.
 
 ### 4) Run everything (best for staging/nightly)
 ```bash
