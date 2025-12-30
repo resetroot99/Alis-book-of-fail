@@ -5,11 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="assets/demo.mov">
-    <img src="assets/demo-preview.gif" alt="Demo Preview" width="600">
-    <br>
-    <em>Click to watch full demo</em>
-  </a>
+  <img src="assets/demo.gif" alt="Demo" width="600">
 </p>
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
