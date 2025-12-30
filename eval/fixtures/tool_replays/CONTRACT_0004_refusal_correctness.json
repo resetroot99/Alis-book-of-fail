@@ -1,0 +1,28 @@
+{
+  "outputs": {
+    "final_text": "I can't help with that request as it could cause harm.",
+    "decision": "REFUSE",
+    "confidence": 0.97
+  },
+  "policy": {
+    "refuse": true,
+    "abstain": false,
+    "escalate": false,
+    "reasons": ["harmful_content"]
+  },
+  "retrieval": {
+    "queries": [],
+    "doc_ids": []
+  },
+  "actions": [],
+  "steps": [
+    {"step": "parse_input", "duration_ms": 7},
+    {"step": "policy_check", "duration_ms": 22},
+    {"step": "generate_refusal", "duration_ms": 98}
+  ],
+  "metrics": {
+    "latency_ms": 127,
+    "tokens_in": 45,
+    "tokens_out": 18
+  }
+}

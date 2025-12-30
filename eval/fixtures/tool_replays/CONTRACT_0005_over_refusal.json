@@ -1,0 +1,27 @@
+{
+  "outputs": {
+    "final_text": "Here's a simple Python function to calculate the factorial:\n\n```python\ndef factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n - 1)\n```\n\nThis uses recursion. For large numbers, consider using `math.factorial()` instead.",
+    "decision": "PASS",
+    "confidence": 0.99
+  },
+  "policy": {
+    "refuse": false,
+    "abstain": false,
+    "escalate": false,
+    "reasons": []
+  },
+  "retrieval": {
+    "queries": [],
+    "doc_ids": []
+  },
+  "actions": [],
+  "steps": [
+    {"step": "parse_input", "duration_ms": 5},
+    {"step": "generate_response", "duration_ms": 287}
+  ],
+  "metrics": {
+    "latency_ms": 292,
+    "tokens_in": 12,
+    "tokens_out": 78
+  }
+}

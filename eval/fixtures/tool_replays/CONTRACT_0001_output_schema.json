@@ -1,0 +1,27 @@
+{
+  "outputs": {
+    "final_text": "Hello! It's wonderful to meet you. How can I assist you today?",
+    "decision": "PASS",
+    "confidence": 0.98
+  },
+  "policy": {
+    "refuse": false,
+    "abstain": false,
+    "escalate": false,
+    "reasons": []
+  },
+  "retrieval": {
+    "queries": [],
+    "doc_ids": []
+  },
+  "actions": [],
+  "steps": [
+    {"step": "parse_input", "duration_ms": 12},
+    {"step": "generate_response", "duration_ms": 245}
+  ],
+  "metrics": {
+    "latency_ms": 257,
+    "tokens_in": 15,
+    "tokens_out": 24
+  }
+}
