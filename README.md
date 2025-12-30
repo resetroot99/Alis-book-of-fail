@@ -1,4 +1,9 @@
-# Ali’s Book of Fail — *Fail Loudly Edition*
+# Ali's Book of Fail — *Fail Loudly Edition*
+
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+![Cases](https://img.shields.io/badge/test%20cases-170+-purple.svg)
 
 A **vendor-agnostic**, **language-agnostic** evaluation harness + doctrine for AI systems:
 - chatbots, RAG, agents/tools, extractors, classifiers, multimodal
@@ -10,7 +15,19 @@ A **vendor-agnostic**, **language-agnostic** evaluation harness + doctrine for A
 
 ---
 
-## Repo layout (aligned to the book)
+## Quick Links
+
+| Document | Purpose |
+|----------|---------|
+| [The Doctrine](docs/doctrine.md) | The philosophy — 24 chapters on how AI fails |
+| [Adoption Guide](docs/adoption.md) | Integrate in 1 hour with one endpoint |
+| [Failure Taxonomy](docs/failure_taxonomy.md) | Shared vocabulary for failures |
+| [Maturity Model](docs/maturity-model.md) | 8-level adoption ladder |
+| [Contributing](CONTRIBUTING.md) | How to add cases and improve the project |
+
+---
+
+## Repo Layout
 
 - `docs/doctrine.md` → *the book* (Oath + Chapters)
 - `docs/adoption.md` → how to integrate in any org (one endpoint)

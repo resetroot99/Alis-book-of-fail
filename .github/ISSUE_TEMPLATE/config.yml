@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Question or Discussion
+    url: https://github.com/resetroot99/Alis-book-of-fail/discussions
+    about: General questions about the framework or philosophy
+  - name: Security Vulnerability
+    url: https://github.com/resetroot99/Alis-book-of-fail/security/advisories/new
+    about: Report a security issue privately

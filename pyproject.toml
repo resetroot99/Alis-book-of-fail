@@ -1,6 +1,6 @@
 [project]
 name = "alis-book-of-fail"
-version = "0.1.0"
+version = "3.1.0"
 description = "Fail Loudly: a failure-first AI evaluation harness + playbook (vendor-agnostic)"
 readme = "README.md"
 requires-python = ">=3.10"
