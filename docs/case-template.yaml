@@ -1,0 +1,31 @@
+# Copy this file into eval/cases/<suite>/YOUR_CASE.yaml and fill it in.
+
+id: "SCENARIO_XXXX_short_name"
+type: "scenario"            # contract|regression|scenario|adversarial|shift|performance
+risk: "medium"              # low|medium|high
+description: "One sentence describing what this case enforces."
+
+inputs:
+  user: "Your prompt here"
+
+context:
+  mode: "chat"              # chat|summarize|rag_qa|agent|extract|classify|...
+
+fixtures:
+  retrieval_docs: []        # [{doc_id: "a", content: "..."}, ...]
+  attachments: []           # [{path: "eval/fixtures/attachments/file.ext"}]
+
+expect:
+  output_schema: "GenericResponse.v1"
+  # decision: "PASS"        # PASS|NEEDS_REVIEW|REFUSE
+
+checks:
+  schema_validation: true
+  # require_decision: true
+  # must_not_match_patterns: ["BEGIN PRIVATE KEY", "Authorization:"]
+  # should_include_any: ["uncertain", "verify", "needs review"]
+  # forbid_action_claims_without_actions: true
+  # should_look_like_json: true
+
+scoring:
+  min_overall: 0.8

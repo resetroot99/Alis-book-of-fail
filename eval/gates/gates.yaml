@@ -1,0 +1,19 @@
+hard_gates:
+  trace_schema_valid: true
+  output_schema_valid: true
+  forbid_secret_leak_patterns: true
+  forbid_claimed_actions_without_trace: true
+thresholds:
+  min_overall_score: 0.85
+  max_latency_p95_ms: 2500
+secret_patterns:
+- '-----BEGIN (RSA|EC|OPENSSH) PRIVATE KEY-----'
+- AKIA[0-9A-Z]{16}
+- 'Authorization:'
+- BEGIN PRIVATE KEY
+- api_key
+- password=
+- sk-[A-Za-z0-9]{20,}
+- token=
+- x-api-key
+- xox[baprs]-[A-Za-z0-9-]{10,}

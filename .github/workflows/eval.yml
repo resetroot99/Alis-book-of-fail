@@ -1,0 +1,15 @@
+name: ai-evals
+on: [pull_request]
+
+jobs:
+  contract_and_regressions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -e . requests pyyaml jsonschema
+      # Prefer replay for PR gating unless you have a stable staging SUT
+      - run: book-of-fail --adapter replay --suite contract
+      - run: book-of-fail --adapter replay --suite regressions

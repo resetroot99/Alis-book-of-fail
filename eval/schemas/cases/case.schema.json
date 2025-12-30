@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "description",
+    "inputs"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "risk": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "inputs": {
+      "type": "object"
+    },
+    "context": {
+      "type": "object"
+    },
+    "fixtures": {
+      "type": "object"
+    },
+    "expect": {
+      "type": "object"
+    },
+    "checks": {
+      "type": "object"
+    },
+    "scoring": {
+      "type": "object"
+    }
+  }
+}

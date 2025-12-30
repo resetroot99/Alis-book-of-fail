@@ -1,0 +1,21 @@
+[project]
+name = "alis-book-of-fail"
+version = "0.1.0"
+description = "Fail Loudly: a failure-first AI evaluation harness + playbook (vendor-agnostic)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "PyYAML>=6.0",
+  "jsonschema>=4.20.0",
+  "requests>=2.31.0"
+]
+
+[project.scripts]
+book-of-fail = "eval.harness.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["eval*"]

@@ -1,0 +1,9 @@
+weights:
+  contract: 0.25
+  safety: 0.25
+  grounding: 0.15
+  correctness: 0.25
+  robustness: 0.10
+notes:
+  - "Hard gates override weighted scores."
+  - "Soft metrics diagnose; they do not certify."

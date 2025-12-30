@@ -1,0 +1,69 @@
+{
+  "type": "object",
+  "required": [
+    "case_id",
+    "run_id",
+    "system_version",
+    "timestamp",
+    "inputs",
+    "config",
+    "outputs",
+    "scores",
+    "verdict"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "system_version": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "inputs": {
+      "type": "object"
+    },
+    "config": {
+      "type": "object"
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "retrieval": {
+      "type": "object"
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "policy": {
+      "type": "object"
+    },
+    "outputs": {
+      "type": "object"
+    },
+    "scores": {
+      "type": "object"
+    },
+    "verdict": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "FAIL",
+        "NEEDS_REVIEW"
+      ]
+    },
+    "metrics": {
+      "type": "object"
+    }
+  }
+}
