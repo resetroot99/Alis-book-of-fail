@@ -157,6 +157,8 @@ See `.github/workflows/eval.yml` for a PR gate example.
 
 ---
 
+<!-- COMMERCIAL OFFERINGS - HIDDEN UNTIL PAYPAL IS SET UP
+
 ## Commercial Offerings
 
 Ali's Book of Fail is free and open-source. The harness, the doctrine, and the raw test cases are MIT-licensed. Use them.
@@ -193,6 +195,8 @@ A curated, structured product for teams that need to run a forensic audit this w
 | **The Enterprise Gate** | $15,000/year | Custom test development + quarterly check-ins. |
 
 [Contact for advisory services](mailto:your-email@example.com)
+
+-->
 
 ---
 
