@@ -180,8 +180,19 @@ A curated, structured product for teams that need to run a forensic audit this w
 
 **The difference:** This repo gives you 172 raw cases. The F.A.I.L. Kit gives you the 50 that matter, organized into a process, with gates that block failures in production.
 
-[Get the F.A.I.L. Kit](https://github.com/resetroot99/The-FAIL-Kit) | [Learn More](commercial/README.md)
+[![Buy Now](https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif)](https://www.paypal.com/ncp/payment/XXXXXXXXXX)
 
+[Learn More](commercial/README.md) | [View Private Repo](https://github.com/resetroot99/The-FAIL-Kit)
+
+### Advisory Services
+
+| Tier | Price | What You Get |
+|------|-------|--------------|
+| **The F.A.I.L. Kit** | $1,200 | Self-service. 50 cases, runbook, gates, templates. |
+| **The Guided Audit** | $4,500 | We run the audit and present findings to your team. |
+| **The Enterprise Gate** | $15,000/year | Custom test development + quarterly check-ins. |
+
+[Contact for advisory services](mailto:your-email@example.com)
 
 ---
 
