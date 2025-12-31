@@ -182,15 +182,6 @@ A curated, structured product for teams that need to run a forensic audit this w
 
 [Get the F.A.I.L. Kit](https://github.com/resetroot99/The-FAIL-Kit) | [Learn More](commercial/README.md)
 
-### Advisory Services
-
-| Tier | Price | What You Get |
-|------|-------|--------------|
-| **The F.A.I.L. Kit** | $1,200 | Self-service. 50 cases, runbook, gates, templates. |
-| **The Guided Audit** | $4,500 | We run the audit and present findings to your team. |
-| **The Enterprise Gate** | $15,000/year | Custom test development + quarterly check-ins. |
-
-[Contact for advisory services](mailto:ali@yourcompany.com)
 
 ---
 
