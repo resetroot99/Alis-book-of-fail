@@ -156,47 +156,45 @@ You can start by returning only:
 See `.github/workflows/eval.yml` for a PR gate example.
 
 ---
+---
 
-<!-- COMMERCIAL OFFERINGS - HIDDEN UNTIL PAYPAL IS SET UP
+## The F.A.I.L. Kit
 
-## Commercial Offerings
+Built on top of this open source foundation, **The F.A.I.L. Kit** provides a curated, production-ready audit framework.
 
-Ali's Book of Fail is free and open-source. The harness, the doctrine, and the raw test cases are MIT-licensed. Use them.
+### What It Adds
 
-But if you need to ship now, there is a faster path.
+**Real-World Validation:**
+- 8 documented AI agent failures from 2023-2025 that cost $106K+ in losses
+- Test cases based on actual production incidents (database deletion, crypto theft, prompt injection attacks)
+- Proof that execution integrity failures are not hypothetical
 
-### The F.A.I.L. Kit - $1,200
+**Security Testing:**
+- 60 adversarial test cases covering prompt injection, data exfiltration, tool abuse, and jailbreaks
+- Framework-specific adapters (LangChain, OpenAI Assistants, Anthropic Claude, Flowise)
+- Auto-generation from codebase (zero-config CLI)
 
-**Forensic Audit of Intelligent Logic**
+**Production Features:**
+- Interactive HTML forensic reports with timeline visualization
+- CI/CD integration (GitHub Actions, GitLab CI)
+- Runtime middleware for Next.js, Express, and FastAPI
+- Deployment gates that block if audits fail
 
-> "Because your agent is a fluent liar and it's time for an interrogation."
+### Open Source & Free
 
-A curated, structured product for teams that need to run a forensic audit this week, not this quarter.
+[View The-FAIL-Kit Repository](https://github.com/resetroot99/The-FAIL-Kit) | [Website](https://fail-kit.dev)
 
-**What you get:**
-- 50 curated test cases (organized into 3 audit levels: Smoke Test, Interrogation, Red Team)
-- Step-by-step audit runbook
-- Executive-friendly report template
-- Production gate enforcement code (TypeScript + Python)
-- Failure mode catalog
+### Relationship Between Repos
 
-**The difference:** This repo gives you 172 raw cases. The F.A.I.L. Kit gives you the 50 that matter, organized into a process, with gates that block failures in production.
+| Alis-book-of-fail | The-FAIL-Kit |
+|-------------------|--------------|
+| 172 raw test cases | 60 curated security cases + 8 real-world incident cases |
+| Generic harness | Framework-specific adapters |
+| Manual case creation | Auto-generation from code |
+| Text reports | Interactive HTML forensic dashboard |
+| Foundation | Production-ready product |
 
-[![Buy Now](https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif)](https://www.paypal.com/ncp/payment/XXXXXXXXXX)
-
-[Learn More](commercial/README.md) | [View Private Repo](https://github.com/resetroot99/The-FAIL-Kit)
-
-### Advisory Services
-
-| Tier | Price | What You Get |
-|------|-------|--------------|
-| **The F.A.I.L. Kit** | $1,200 | Self-service. 50 cases, runbook, gates, templates. |
-| **The Guided Audit** | $4,500 | We run the audit and present findings to your team. |
-| **The Enterprise Gate** | $15,000/year | Custom test development + quarterly check-ins. |
-
-[Contact for advisory services](mailto:your-email@example.com)
-
--->
+Use **book-of-fail** for custom test development. Use **FAIL Kit** for immediate deployment.
 
 ---
 
